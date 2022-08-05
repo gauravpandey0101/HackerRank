@@ -13,6 +13,7 @@ int main()
 {   
     char str[]="gaurav pandey";
     encrypt(str);
+    printf("Encrypted message = %s",str);
     return 0;
 }
 
@@ -24,5 +25,4 @@ void encrypt(char *str)
         *ptr=*ptr+1;
         ptr++;
     }
-    printf("Encrypted message = %s",ptr);
 }
