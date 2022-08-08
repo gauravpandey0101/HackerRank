@@ -5,7 +5,7 @@
 */
 
 #include<stdio.h>
-void show(struct pointer a);              // Function prototype
+struct pointer show(struct pointer a);              // Function prototype
 
 struct pointer
 { 
@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-void show(struct pointer a)               // function definition
+struct pointer show(struct pointer a)               // function definition
 {
     printf("I = %d",a.i);
 }
