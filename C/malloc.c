@@ -16,4 +16,4 @@ int main()
     //  free memory allocated using malloc
     free(ptr);
     return 0;
-}
+} 
