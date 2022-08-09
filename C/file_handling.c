@@ -13,5 +13,6 @@ int main()
     ptr = fopen("sample.txt","r");      
     fscanf(ptr,"%d",&num);              
     printf("num = %d",num);
+    fclose(ptr);
     return 0;
 }
