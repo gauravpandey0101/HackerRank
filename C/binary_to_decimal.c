@@ -1,18 +1,21 @@
 #include<stdio.h>
-
+#include<math.h>
 int main()
 {
-    int n,i=0,r,b,rem,d=0;
+    int n,n1,i=0,d,ans=0;
     printf("input any binary number");
-    scanf("%d",&b);
-    n=b;
-    while(b!=0)
+    scanf("%d",&n);
+    n1=n;
+    while(n!=0)
     {
-        rem=b%10;
-        d=d+rem*pow(2,i);
-        b=b/10;
+        d = n % 10;
+        if( d==1 )
+        {
+            ans = ans + pow(2,i);
+        }
+        n = n/10;
         i++;
     }
-    printf("Decimal of Binary number %d = %d",n,d);
+    printf("Decimal of Binary number %d = %d",n1,ans);
 return 0;
 }
