@@ -1,18 +1,19 @@
 #include<stdio.h>
+#include <math.h>
 
 int main()
 {
-    int n,i=0,r,b=0,n1;
+    int n,ans=0,r,bit,n1,i=0;
     printf("input any number");
     scanf("%d",&n);
     n1=n;
-    while(n!=0)
+    while( n!=0 ) 
     {
-        r=n%2;
-        b=b+r*i;
-        i=i*10;
-        n=n/2;
+        bit = n & 1;
+        ans = (bit * pow(10,i)) + ans;
+        n = n >> 1;
+        i++;
     }
-    printf("Binary of decimal number %d = %d",n1,b);
+    printf("Binary of decimal number %d = %d",n1,ans);
 return 0;
 }
